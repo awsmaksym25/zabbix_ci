@@ -2,7 +2,7 @@
 
 set -e
 
-echo 'shemetmaksim/zabbix:"$TRAVIS_COMMIT" should be deployed...' 
+echo shemetmaksim/zabbix:"$TRAVIS_COMMIT" should be deployed...
 
 
 if [ $(gcloud compute instances list |  grep "zabbix" | wc -l) -eq 0 ];
