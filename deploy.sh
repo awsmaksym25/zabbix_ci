@@ -5,6 +5,7 @@ set -e
 echo shemetmaksim/zabbix:"$TRAVIS_COMMIT" should be deployed...
 
 
+#deploy container to GCP, if instance already axist just replace docker img
 if [ $(gcloud compute instances list |  grep "zabbix" | wc -l) -eq 0 ];
 then
     gcloud compute instances create-with-container zabbix --zone $ZONE --tags=http-server --container-image shemetmaksim/zabbix:"$TRAVIS_COMMIT"
