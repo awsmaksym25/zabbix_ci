@@ -13,7 +13,7 @@ Done: after pushing to master, travis build image set commit hash as tag and dep
 │           └── zabbix-release_5.0-1+bionic_all.deb
 └── README.md
 
-
+ 
 deploy.sh  -- script which deploy or update instance with docker container
 Dockerfile -- ENV DBPASSWORD="password"!! should be erised and use seret  env ar from travis
 create.sql.gz --  used in Dockerfile for zabbix db_init >> zcat create.sql.gz | mysql zabbix -uzabbix -p$DBPASSWORD
