@@ -22,7 +22,6 @@ before_install:
     - gcloud auth activate-service-account --key-file gcloud-service-key.json
     - gcloud config set project $PROJECT_ID
     - gcloud config set compute/zone $ZONE
-    - gcloud compute instances update-container zabbix --zone $ZONE --container-image shemetmaksim/zabbix:"$TRAVIS_COMMIT"
 deploy:
     - provider: script
       skip_cleanup: true
