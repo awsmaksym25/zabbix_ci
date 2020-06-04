@@ -2,9 +2,9 @@ Project:
 
 Done: after pushing to master, travis build image set commit hash as tag and deploy it to GCP.
 
-.\n
-├── deploy.sh\n
-├── docker\n
+.
+├── deploy.sh
+├── docker
 │   ├── Dockerfile
 │   └── src
 │       └── zabbix_pkg
