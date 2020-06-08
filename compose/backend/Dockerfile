@@ -16,4 +16,4 @@ RUN apt-get update && apt-get install -y zabbix-server-mysql
 
 RUN sed  -i 's/# DBPassword=/DBPassword='$DBPASSWORD'/g' /etc/zabbix/zabbix_server.conf
 
-CMD ["/usr/sbin/zabbix_server", "--foreground", "-c", "/etc/zabbix/zabbix_server.conf"]
+ENTRYPOINT ["/bin/bash", "--", "docker-entrypoint.sh"]
